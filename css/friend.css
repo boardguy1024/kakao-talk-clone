@@ -34,9 +34,15 @@
   display: block;
 }
 
-.friend__content .friend__status {
+.friend__content .friend__status,
+.friend__content .friend__bottom-text {
   font-size: 14px;
   opacity: 0.6;
+}
+
+.friend__content .friend__bottom-text,
+.friend .chat__timestamp {
+  font-size: 12px;
 }
 
 .friend .friend__now-listening {
@@ -46,11 +52,21 @@
   font-size: 14px;
 }
 
-.friend .friend__now-listening span {
+.friend .friend__now-listening span,
+.friend .chat__timestamp {
   opacity: 0.6;
 }
 
 .friend .friend__now-listening i {
   font-size: 16px;
   color: #5aad77;
+}
+
+.friend__add-btn {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
