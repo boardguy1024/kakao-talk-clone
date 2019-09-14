@@ -68,21 +68,29 @@
 
 .message {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
+  margin-bottom: 20px;
 }
 
 .message .message__content {
   width: 80%;
 }
 
-.incoming-massage img {
+.incoming-message img {
   width: 30px;
   border-radius: 15px;
   margin-right: 20px;
 }
 
-.incoming-massage {
+.message .message__author {
+  margin-top: 10px;
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.incoming-message {
   align-self: flex-start;
 }
 
@@ -95,4 +103,12 @@
   padding: 10px 20px;
   box-shadow: 0 5px 10px rgba(50, 50, 93, 0.1);
   border-radius: 20px;
+}
+
+.incoming-message .message__bubble {
+  border-bottom-left-radius: 0px;
+}
+
+.sent-message .message__bubble {
+  border-bottom-right-radius: 0px;
 }
