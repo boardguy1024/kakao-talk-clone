@@ -28,24 +28,26 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: #fcfcfc;
-  padding: 4px 30px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .chat__write {
-  width: 100%;
+  background-color: red;
   bottom: 0px;
   border-radius: 0px;
   padding: 10px 60px;
   border: none;
   font-size: 14px;
   width: 100%;
+  transition: all 0.3s ease-in;
+  margin: 0px auto;
 }
 
 .chat__write-left {
   position: absolute;
+  left: 10px;
 }
 
 .chat__write-right {
@@ -56,6 +58,11 @@
 /*inputがフォーカスになった場合アウトラインをなくす*/
 .chat__write:focus {
   outline: none;
+  width: 80%;
+  transform: translateY(-50px);
+  border-radius: 30px;
+  box-shadow: 0 7px 10px rgba(50, 50, 93, 0.3);
+  animation: float 3s linear infinite forwards;
 }
 
 .chat-icon {
@@ -142,4 +149,46 @@
 .sent-message .message__bubble {
   border-bottom-right-radius: 0px;
   background-image: linear-gradient(to right, #6a82fb, #fc5c7d);
+}
+
+.incoming-message {
+  animation: incomingAnim 0.5s ease-out forwards;
+}
+
+.sent-message {
+  animation: sentAnim 0.5s ease-out forwards;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 7px 10px rgba(50, 50, 93, 0.3);
+  }
+  50% {
+    box-shadow: 0 15px 20px rgba(50, 50, 93, 0.3);
+  }
+  100% {
+    box-shadow: 0 7px 10px rgba(50, 50, 93, 0.3);
+  }
+}
+
+@keyframes incomingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sentAnim {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
