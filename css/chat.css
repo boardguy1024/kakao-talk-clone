@@ -3,6 +3,7 @@
   position: fixed;
   width: 100%;
   box-shadow: 0 5px 10px rgba(50, 50, 93, 0.1);
+  z-index: 1;
 }
 
 .chats-body {
@@ -11,7 +12,7 @@
 
 .chat-screen {
   background-image: url("../images/chat_bg.png");
-  min-height: 100vh;
+  min-height: 1000vh;
   padding-top: 100px;
 }
 
